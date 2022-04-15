@@ -96,4 +96,67 @@ console.log('In every programming language it starts with \"Hello, World!\"')
 console.log("In every programming language it starts with \'Hello, World!\'")
 console.log('The saying \'Seeing is Believing\' isn\'t correct in 2020')
 
+// Template Literals (Template Strings)
+/* To create a template strings, we use two back-ticks.
+ We can inject data as expressions inside a template string.
+ To inject data, we enclose the expression with a curly bracket({}) preceded by a $ sign. 
+ See the syntax below. 
 
+ `String literal text`
+ `String literal text ${expression}` */
+
+ let myNamen = 'Abdullahi'
+ let city_2 = 'Budapest'
+ console.log(`My name is ${myNamen}. My favorite city is ${city_2}.`)
+
+// Example 2
+
+let firstNameOne = 'AbdulRaheem'
+let lastNameOne = 'AbdulLateef'
+let country = 'Germany'
+let city_1 = 'Berlin'
+let language = 'JavaScript'
+let job_1 = 'Web Developer'
+let age = 25
+let fullName_1 = firstNameOne + ' ' + lastNameOne
+
+let personInfoTwo = `I am ${fullName_1}. I am ${age}. I live in ${country}.` //ES6 - String interpolation method
+let personInfoThree = `I am ${fullName_1}. I live in ${city_1}, ${country}. I am a ${job_1}. I'm learning ${language}.`
+console.log(personInfoTwo)
+console.log(personInfoThree)
+
+// String Methods
+/* Object, properties 'Hello'.length
+Object, method 'hello'.toUpperCase()
+Built-in Objects (collections of methods and properties) 
+*/
+
+// 1. length 
+let js = 'JavaScript';
+console.log(js.length)
+
+let myCurrentNames = 'AbdulHakeem Abdullah'
+console.log(myCurrentNames.length)
+
+// 2. Accessing characters in a string
+let progLang = 'JavaScript';
+let firstLetter = progLang[0]
+let lastLetter = progLang[9]
+console.log(firstLetter)
+console.log(progLang[5])
+console.log(lastLetter)
+
+let lastIndex = progLang.length - 6
+console.log(lastIndex)
+console.log(progLang[lastIndex])
+
+// 3. toUpperCase(): this method changes the string to uppercase letters.
+console.log(progLang.toUpperCase())
+console.log(myCurrentNames.toUpperCase())
+
+
+// 4. toLowerCase(): this method changes the string to lowercase letters.
+console.log(myCurrentNames.toLowerCase())
+console.log(job.toLowerCase())
+
+// 5. substr(): It takes two arguments, the starting index and number of characters to slice.
