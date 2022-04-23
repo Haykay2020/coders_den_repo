@@ -160,3 +160,57 @@ console.log(myCurrentNames.toLowerCase())
 console.log(job.toLowerCase())
 
 // 5. substr(): It takes two arguments, the starting index and number of characters to slice.
+let string = 'JavaScript'
+console.log(string.substr(4,6)) // Script
+
+let data = 'TypeScript'
+console.log(data.substr(2, 6)) // peScri
+console.log(data.substr(0, 4)) // Type
+
+// 6. substring(): It takes two arguments, the starting index and the stopping index but it doesn't include the character at the stopping index.
+console.log(string.substring(4,6))      // Sc
+console.log(string.substring(0,4))     // Java
+console.log(string.substring(4,10))    // Script
+console.log(string.substring(4))       // Script
+
+console.log(data.substring(2, 5))     // peS
+
+// 7. split(): The split method splits a string at a specified place.
+let string2 = '30 Days Of JavaScript'
+console.log(string2.split(' '))  // [ '30', 'Days', 'Of', 'JavaScript' ]
+
+console.log(city.split(''))     // [ 'P', 'r', 'e', 't', 'o', 'r', 'i', 'a']
+
+let countries = 'Finland, Sweden, Norway, Denmark, and Iceland'
+console.log(countries.split(','))   // split to an array at comma
+
+// 8. trim(): Removes trailing space in the beginning or the end of a string
+let code = '   30 Days Of JavaScript   '
+console.log(code.trim()) //  30 Days Of JavaScript
+
+
+// 9. includes(): It takes a substring argument and it checks if substring argument exists in the string. includes() returns a boolean. If a substring exist in a string, it returns true, otherwise it returns false.
+console.log(string2.includes('Of'))    // true
+console.log(string2.includes('days'))    // false - its case sensitive
+console.log(string2.includes('Java'))  // true
+
+// 10. replace(): takes as a parameter the old substring and a new substring.
+// Syntax string.replace(oldsubstring, newsubstring)
+console.log(string2.replace('JavaScript', 'Python')) // 30 Days Of Python
+console.log(code.replace('30', '100')) // 100 Days Of JavaScript
+console.log(county1.replace('Africa', 'America')) // South America
+
+// 11. charAt(): Takes index and it returns the value at that index
+// Syntax string.charAt(index)
+console.log(string.charAt()) // J
+console.log(string2.charAt(5)) // y
+
+// 12. charCodeAt(): Takes index and it returns char code (ASCII number) of the value at that index
+console.log(string.charCodeAt(9)) // t in ASCII 116
+console.log(string2.charCodeAt(1)) // 48
+
+// 13. indexOf(): Takes a substring and if the substring exists in a string it returns the first position of the substring if does not exist it returns -1
+// Syntax string.indexOf(substring)
+console.log(string2.indexOf('Days')) // 3
+console.log(string2.indexOf('Java')) // 11
+console.log(string.indexOf('Script')) // 4
