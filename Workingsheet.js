@@ -214,3 +214,71 @@ console.log(string2.charCodeAt(1)) // 48
 console.log(string2.indexOf('Days')) // 3
 console.log(string2.indexOf('Java')) // 11
 console.log(string.indexOf('Script')) // 4
+console.log(string.indexOf('days')) // -1
+
+// 14. lastIndexOf(): Takes a substring and if the substring exists in a string it returns the last position of the substring if it does not exist it returns -1
+// Syntax string.lastIndexOf(substring)
+console.log(string.lastIndexOf('Script')) // 4
+console.log(string2.lastIndexOf('JavaScript')) // 11
+
+// 15. concat(): it takes many substrings and joins them.
+// Syntax string.concat(substring, substring, substring)
+let data1 = '30'
+console.log(data1.concat('Days', 'of', 'JavaScript')) // 30DaysofJavaScript
+
+let county = 'Nor';
+console.log(county.concat('Way')); // NorWay
+
+// 16. startsWith: it takes a substring as an argument and it checks if the string starts with that specified substring. It returns a boolean(true or false).
+//syntax string.startsWith(substring)
+let stringNow = 'Love is the best thing in the world'
+console.log(stringNow.startsWith('Lov')) // true
+console.log(stringNow.startsWith('world')) //false
+console.log(stringNow.startsWith('Love is the best')) //true
+
+// 17. endsWith: it takes a substring as an argument and it checks if the string ends with that specified substring. It returns a boolean(true or false).
+// Syntax string.endsWith(substring)
+console.log(stringNow.endsWith('world')) //true
+console.log(stringNow.endsWith('Love')) //false
+console.log(stringNow.endsWith('thing in the world')) //true
+
+// 18.search: it takes a substring as an argument and it returns the index of the first match. The search value can be a string or a regular expression pattern.
+// Syntax: string.search(substring) g-means to search in the whole text, i - case insensitive
+let word = 'I love JavaScript. If you do not love JavaScript what else can you love.'
+console.log(word.search('love'))          // 2
+console.log(word.search(/javascript/gi))  // 7
+
+// 19. match: it takes a substring or regular expression pattern as an argument and it returns an array if there is match if not it returns null. Let us see how a regular expression pattern looks like. It starts with / sign and ends with / sign.
+
+let pattern11 = 'I love JavaScript. If you do not love JavaScript what else can you love.'
+let patternOne = /love/     // with out any flag
+let patternTwo = /love/gi   // g-means to search in the whole text, i - case insensitive
+
+console.log(pattern11.match('JavaScript')) /* [ 'JavaScript',
+index: 7,
+input: 'I love JavaScript. If you do not love JavaScript what else can you love.',
+groups: undefined ] */
+
+console.log(pattern11.match(patternOne)) /* [ 'love',
+index: 2,
+input: 'I love JavaScript. If you do not love JavaScript what else can you love.',
+groups: undefined ] */
+
+
+// Extracting number
+
+let txt = 'In 2019, I ran 30 Days of Python. Now, in 2020 I am super exited to start this challenge'
+let regEx = /\d+/
+
+// d with escape character means d not a normal d instead acts a digit
+// + means one or more digit numbers,
+// if there is g after that it means global, search everywhere.
+
+console.log(txt.match(regEx))  // ["2", "0", "1", "9", "3", "0", "2", "0", "2", "0"]
+console.log(txt.match(/\d+/g)) // ["2019", "30", "2020"]
+
+
+// 20. repeat(): it takes a number as argument and it returns the repeated version of the string.
+console.log(county.repeat(10)) // NorNorNorNorNorNorNorNorNorNor
+
+
